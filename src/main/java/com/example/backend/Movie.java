@@ -9,12 +9,12 @@ import org.springframework.data.mongodb.core.mapping.DocumentReference;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-// import lombok.NoArgsConstructor;
+import lombok.NoArgsConstructor;
 
 @Document(collection = "movies")
 @Data
 @AllArgsConstructor
-// @NoArgsConstructor
+@NoArgsConstructor
 public class Movie {
     @Id
     private ObjectId id;
@@ -26,5 +26,5 @@ public class Movie {
     private List<String> backdrops;
     private List<String> genres;
     @DocumentReference
-    private List<Reviews> reviews;
+    private List<Review> reviewIds;
 }
